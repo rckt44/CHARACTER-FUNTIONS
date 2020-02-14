@@ -1,0 +1,12 @@
+/*how to use index function*/
+/*https://www.sascrunch.com/index-function.html*/
+/*INDEX EXTRACTS THE FIRST POSITON OF OCCURANCE*/
+data x0;
+set sashelp.orsales(keep=Product_Line Product_Category);
+run;
+
+data x1;
+set x0;
+pos=index(strip(Product_Category),strip(Product_Line));
+run;
+
